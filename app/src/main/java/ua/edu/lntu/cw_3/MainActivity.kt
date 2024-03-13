@@ -67,4 +67,12 @@ fun CardItem(index: Int)
     var isExpanded by remember { mutableStateOf(false) }
     val cardHeight = if (isExpanded) 225.dp else 100.dp
 
+    Card(
+        modifier = Modifier
+            .fillMaxWidth()
+            .height(cardHeight)
+            .clickable { isExpanded = !isExpanded },
+    ) {
+
+    }
 }
