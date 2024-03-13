@@ -76,7 +76,12 @@ fun CardItem(index: Int)
         Column(
             modifier = Modifier.padding(16.dp)
         ) {
-
+            Text()
+            Image()
+            if (isExpanded)
+            {
+                Text()
+            }
         }
     }
 }
