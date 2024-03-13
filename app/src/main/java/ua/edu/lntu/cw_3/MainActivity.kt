@@ -49,5 +49,19 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun CardColumn() {
+fun CardColumn()
+{
+    Column(
+        modifier = Modifier.padding(16.dp),
+        verticalArrangement = Arrangement.spacedBy(16.dp)
+    ) {
+        repeat(5) {
+            CardItem(index = it)
+        }
+    }
+}
+
+@Composable
+fun CardItem(index: Int)
+{
 }
