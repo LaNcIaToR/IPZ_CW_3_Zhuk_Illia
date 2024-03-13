@@ -76,11 +76,17 @@ fun CardItem(index: Int)
         Column(
             modifier = Modifier.padding(16.dp)
         ) {
-            Text()
-            Image()
+            Text("Title of Card #$index", style = MaterialTheme.typography.bodyLarge)
+            Image(
+                painter = painterResource(id = R.drawable.ic_launcher_background),
+                contentDescription = null,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(120.dp)
+            )
             if (isExpanded)
             {
-                Text()
+                Text("Description of Card #$index", modifier = Modifier.fillMaxHeight())
             }
         }
     }
