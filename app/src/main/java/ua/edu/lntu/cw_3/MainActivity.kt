@@ -73,6 +73,10 @@ fun CardItem(index: Int)
             .height(cardHeight)
             .clickable { isExpanded = !isExpanded },
     ) {
+        Column(
+            modifier = Modifier.padding(16.dp)
+        ) {
 
+        }
     }
 }
