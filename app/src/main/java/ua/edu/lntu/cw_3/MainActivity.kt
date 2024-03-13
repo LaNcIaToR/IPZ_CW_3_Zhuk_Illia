@@ -14,6 +14,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Card
 import androidx.compose.material3.MaterialTheme
@@ -51,12 +52,12 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun CardColumn()
 {
-    Column(
+    LazyColumn(
         modifier = Modifier.padding(16.dp),
         verticalArrangement = Arrangement.spacedBy(16.dp)
     ) {
-        repeat(5) {
-            CardItem(index = it)
+        items(15) { index ->
+            CardItem(index = index)
         }
     }
 }
